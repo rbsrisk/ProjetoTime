@@ -1,17 +1,20 @@
+import java.util.Scanner;
 
 public class TimeTeste {
-	
-	public static void main(String args[]) {			
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Time t = new Time();
+		int h,m,s;
+		h = teclado.nextInt();
+		m = teclado.nextInt();
+		s = teclado.nextInt();
 		
+		t.setTime(h,m,s);
+
+		System.out.println(t.exibirHoraUniversal());
+		System.out.println(t.exibirHoraPadrao());
 		
-		Time t = new Time (10,30,25);
-		System.out.println(t.getHora());
-		System.out.println(t.getMinuto());
-		System.out.println(t.getSegundo());
-		
-		System.out.println("Hora Universal: "+t.getHora+":"+t.getMinuto+":"+t.getSegundo);
-		
-			
-		}
+	}
 
 }
